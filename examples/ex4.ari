@@ -1,0 +1,37 @@
+total 227
+input 0 # one-input
+nizkinput 1 # input
+nizkinput 2 # input
+nizkinput 3 # input
+const-mul-0 in 1 <0> out 1 <4> # zero
+const-mul-ffffffff in 1 <1> out 1 <5> # multiply-by-constant 4294967295
+add in 2 <2 5> out 1 <6> # CmpLT Isekai::DFGExpr - Isekai::DFGExpr
+split in 1 <6> out 65 <7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71> # SplitBus
+mul in 2 <38 1> out 1 <72> # cond trueterm
+const-mul-neg-1 in 1 <38> out 1 <73> # cond minuscond
+add in 2 <0 73> out 1 <74> # cond negcond
+mul in 2 <74 2> out 1 <75> # cond falseterm
+add in 2 <72 75> out 1 <76> # cond result
+const-mul-ffffffff in 1 <76> out 1 <77> # multiply-by-constant 4294967295
+add in 2 <3 77> out 1 <78> # CmpLT Isekai::DFGExpr - Isekai::DFGExpr
+split in 1 <78> out 65 <79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143> # SplitBus
+mul in 2 <110 3> out 1 <144> # cond trueterm
+const-mul-neg-1 in 1 <110> out 1 <145> # cond minuscond
+add in 2 <0 145> out 1 <146> # cond negcond
+mul in 2 <146 76> out 1 <147> # cond falseterm
+add in 2 <144 147> out 1 <148> # cond result
+mul in 2 <38 2> out 1 <149> # cond trueterm
+const-mul-neg-1 in 1 <38> out 1 <150> # cond minuscond
+add in 2 <0 150> out 1 <151> # cond negcond
+mul in 2 <151 1> out 1 <152> # cond falseterm
+add in 2 <149 152> out 1 <153> # cond result
+const-mul-ffffffff in 1 <153> out 1 <154> # multiply-by-constant 4294967295
+add in 2 <148 154> out 1 <155> # CmpLT Isekai::DFGExpr - Isekai::DFGExpr
+split in 1 <155> out 65 <156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220> # SplitBus
+mul in 2 <187 153> out 1 <221> # cond trueterm
+const-mul-neg-1 in 1 <187> out 1 <222> # cond minuscond
+add in 2 <0 222> out 1 <223> # cond negcond
+mul in 2 <223 148> out 1 <224> # cond falseterm
+add in 2 <221 224> out 1 <225> # cond result
+mul in 2 <0 225> out 1 <226> # output-cast
+output 226 # 

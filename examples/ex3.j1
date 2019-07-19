@@ -1,0 +1,2 @@
+{"r1cs":{"constraint_nb":1,"extension_degree":1,"field_characteristic":1,"instance_nb":2,"version":"1.0","witness_nb":2}}
+{"A":[[0,"0"],[1,"1"]],"B":[[0,"0"],[1,"5"],[3,"1"],[4,"8589934590"]],"C":[[0,"0"],[2,"1"]]}
