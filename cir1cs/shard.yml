@@ -1,0 +1,13 @@
+name: cir1cs
+version: 0.1.0
+
+authors:
+  - your-name-here <your-email-here>
+
+targets:
+  cir1cs:
+    main: src/cir1cs.cr
+
+crystal: 0.28.0
+
+license: MIT
