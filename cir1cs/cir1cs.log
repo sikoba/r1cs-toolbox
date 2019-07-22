@@ -1,0 +1,114 @@
+
+................................................................................
+
+SimpleLog
+
+called from /mnt/c/Users/ak/Dropbox/github_P51/sikoba/r1cs-toolbox/cir1cs/src/cir1cs.cr
+
+2019-07-21 00:59:31 +02:00
+
+................................................................................
+
+
+##### ##### 
+##### 
+##### Reading file ./../examples/ex1test.ari
+##### 
+##### ##### 
+
+
+** processing line 1 [total 15]
+
+   total circuit line_count expected: 15
+
+** processing line 2 [input 0 # input]
+
+   added input wire 0
+
+** processing line 3 [input 1 # input]
+
+   added input wire 1
+
+** processing line 4 [input 2 # one-input]
+
+   added input wire 2
+
+** processing line 5 [const-mul-0 in 1 <2> out 1 <3> # zero]
+
+   const_mul 0_C x 2 = 3
+
+** processing line 6 [const-mul-2 in 1 <1> out 1 <4> # multiply-by-constant 2]
+
+   const_mul 2_C x 1 = 4
+
+** processing line 7 [const-mul-5 in 1 <2> out 1 <5> # constant 5]
+
+   const_mul 5_C x 2 = 5
+
+** processing line 8 [add in 2 <0 5> out 1 <6> # #<Isekai::ArithAddReq:0x7fff2e16db00>]
+
+   add [0, 5] = 6
+
+** processing line 9 [const-mul-neg-1 in 1 <4> out 1 <7> # zerop subtract negative]
+
+   const_mul_neg -1_C x 4 = 7
+
+** processing line 10 [add in 2 <6 7> out 1 <8> # zerop diff]
+
+   add [6, 7] = 8
+
+** processing line 11 [zerop in 1 <8> out 2 <10 9> # zerop #<Isekai::ArithAddBus:0x7fff2e1ebdc0>]
+
+   zerop 8 => [10, 9]
+
+** processing line 12 [split in 1 <7> out 3 <11 12 13> # SplitBus]
+
+   split 7 => [11, 12, 13]
+
+** processing line 13 [const-mul-neg-1 in 1 <9> out 1 <14> # zerop inverse]
+
+   const_mul_neg -1_C x 9 = 14
+
+** processing line 14 [add in 2 <2 11> out 1 <15> # zerop result]
+
+   add [2, 11] = 15
+
+** processing line 15 [mul in 2 <2 12> out 1 <16> # output-cast]
+
+   mul [2, 12] = 16
+
+** processing line 16 [output 17 # ]
+
+   added output wire 17
+
+===== 
+===== Result of arithemtic circuit import
+===== 
+
+inputs
+[0, 1]
+
+oneinput
+2
+
+nizkinputs
+[]
+
+ops
+[:const_mul, 0, 2, 3]
+[:const_mul, 2, 1, 4]
+[:const_mul, 5, 2, 5]
+[:add, [0, 5], 6]
+[:const_mul_neg, 1, 4, 7]
+[:add, [6, 7], 8]
+[:zerop, 8, [10, 9]]
+[:split, 7, [11, 12, 13]]
+[:const_mul_neg, 1, 9, 14]
+[:add, [2, 11], 15]
+[:mul, [2, 12], 16]
+
+output
+17
+
+wires
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
