@@ -1,4 +1,4 @@
-
+require "big.cr"
 
 def write_to_file(x, target_file)
   File.write(target_file, x)
@@ -56,7 +56,7 @@ class SimpleLog
   def abort(x)
     warn x
     dump
-	abort "aborting", 1
+	  abort "aborting", 1
   end
   
   # adding to log
@@ -84,4 +84,23 @@ class SimpleLog
     puts s if @verbose > 0
   end
   
+end
+
+
+##################### maths
+class Maths
+
+  #modular exponentiation: a^exp [mod]
+  def exp_modulo(a : BigInt, exp : BigInt, mod : BigInt)
+    res = BigInt.new(1);
+    while (exp > 0)
+      if ((exp & 1) > 0)
+        res = (res*a).modulo(mod);
+      end
+      exp >>= 1;
+      a = (a*a).modulo(mod)
+    end
+    return res;
+  end
+
 end
